@@ -4,8 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import ro.dragossusi.android.imagepicker.R
 import ro.dragossusi.android.imagepicker.ImagePickerListener
+import ro.dragossusi.android.imagepicker.R
 
 
 /**
@@ -14,6 +14,12 @@ import ro.dragossusi.android.imagepicker.ImagePickerListener
  * @author dragos
  */
 object ImagePicker {
+
+    var directory: String? = null
+
+    fun getDirectoryName(context: Context): String {
+        return directory ?: context.getString(R.string.image_picker_folder_name)
+    }
 
     fun createDialog(
         context: Context,
