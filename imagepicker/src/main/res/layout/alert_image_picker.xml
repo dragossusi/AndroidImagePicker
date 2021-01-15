@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_camera"
+        style="@style/ImagePickerDialog.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take Picture"
+        android:textColor="@android:color/black"
+        app:drawableStartCompat="@drawable/ic_outline_photo_camera_24" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_gallery"
+        style="@style/ImagePickerDialog.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pick from gallery"
+        android:textColor="@android:color/black"
+        app:drawableStartCompat="@drawable/ic_outline_image_24" />
+
+</LinearLayout>
