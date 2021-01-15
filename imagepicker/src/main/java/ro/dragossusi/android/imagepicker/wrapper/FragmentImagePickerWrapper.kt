@@ -1,4 +1,4 @@
-package ro.dragossusi.android.imagepicker
+package ro.dragossusi.android.imagepicker.wrapper
 
 import android.Manifest
 import android.net.Uri
@@ -6,6 +6,8 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
+import ro.dragossusi.android.imagepicker.ImagePickerListener
+import ro.dragossusi.android.imagepicker.createPrivateImageFile
 import ro.dragossusi.android.imagepicker.ui.ImagePicker
 
 
@@ -14,10 +16,11 @@ import ro.dragossusi.android.imagepicker.ui.ImagePicker
  * @since 9/21/20
  * @author dragos
  */
-class ImagePickerWrapper constructor(
+class FragmentImagePickerWrapper constructor(
     private val fragment: Fragment,
-    private val onPermissionError: ((String) -> Unit)? = null,
-    private val onImageSelected: (Uri?) -> Unit
+    private val providerAuthority: String,
+    var onPermissionError: ((String) -> Unit)? = null,
+    var onImageSelected: (Uri?) -> Unit
 ) : ImagePickerListener {
 
     private var uri: Uri? = null
@@ -65,15 +68,11 @@ class ImagePickerWrapper constructor(
     }
 
     override fun onCameraPicker() {
-//        val uri: Uri? = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
-//            requireContext().contentResolver.createMediaUri(false, false)
-//        } else {
-//        }
         val context = fragment.requireContext()
         val file = context.createPrivateImageFile()
         val uri = FileProvider.getUriForFile(
             context,
-            "${context.packageName}.filesystem.provider",
+            providerAuthority,
             file
         )
         if (uri != null) pickImage(uri)

@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View.OnClickListener
 import androidx.appcompat.widget.AppCompatImageView
-import ro.dragossusi.android.imagepicker.ImagePickerWrapper
+import ro.dragossusi.android.imagepicker.wrapper.FragmentImagePickerWrapper
 import ro.dragossusi.android.imagepicker.R
 
 
@@ -19,7 +19,7 @@ class AvatarImageView @JvmOverloads constructor(
     defStyleAttr: Int = R.attr.avatarImageViewStyle
 ) : AppCompatImageView(context, attrs, defStyleAttr) {
 
-    var imagePickerWrapper: ImagePickerWrapper? = null
+    var imagePickerWrapper: FragmentImagePickerWrapper? = null
 
     private val onClickListener = OnClickListener {
         imagePickerWrapper?.showDialog()
