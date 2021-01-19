@@ -37,11 +37,11 @@ class ActivityImagePickerWrapper constructor(
             //start image capture
             imagePicker.launch(uri)
         } else {
-            // Explain to the user that the feature is unavailable because the
-            // features requires a permission that the user has denied. At the
-            // same time, respect the user's decision. Don't link to system
-            // settings in an effort to convince the user to change their
-            // decision.
+             /* Explain to the user that the feature is unavailable because the
+             features requires a permission that the user has denied. At the
+             same time, respect the user's decision. Don't link to system
+             settings in an effort to convince the user to change their
+             decision. */
             onPermissionError?.invoke(Manifest.permission.CAMERA)
         }
     }

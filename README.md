@@ -4,6 +4,12 @@ New Android versions support
 
 ## Getting started
 
+### Add dependency
+
+```groovy
+    implementation 'ro.dragossusi.android:imagepicker:1.0.0'
+```
+
 ### Declare your target directory
 
 You can declare your target directory using code or string resource.
