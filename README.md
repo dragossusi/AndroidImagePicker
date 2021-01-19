@@ -1,4 +1,5 @@
 # Android Image Picker
+[![Maven Central](https://maven-badges-generator.herokuapp.com/maven-central/ro.dragossusi.android/imagepicker/badge.svg)](https://maven-badges-generator.herokuapp.com/maven-central/ro.dragossusi.android/imagepicker)
 
 New Android versions support
 
