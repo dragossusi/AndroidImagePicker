@@ -8,7 +8,7 @@ New Android versions support
 ### Add dependency
 
 ```groovy
-    implementation 'ro.dragossusi.android:imagepicker:1.0.0'
+    implementation 'ro.dragossusi.android:imagepicker:1.0.1'
 ```
 
 ### Declare your target directory
