@@ -1,5 +1,6 @@
 # Android Image Picker
 [![Maven Central](https://maven-badges-generator.herokuapp.com/maven-central/ro.dragossusi.android/imagepicker/badge.svg)](https://maven-badges-generator.herokuapp.com/maven-central/ro.dragossusi.android/imagepicker)
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Dragos%20Rachieru-green.svg?style=flat )]( https://android-arsenal.com/details/1/8395 )
 
 New Android versions support
 
